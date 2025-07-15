@@ -1,36 +1,50 @@
-## Oii, Janiele Aqui!
+## 👋 Oii, eu sou a Janiele!
 
-<div>
-  
-  <img  height="180em" src="https://github-readme-stats.vercel.app/api?username=JanieleCristina006&show_icons=true&theme=great-gatsby&include_all_commits=true&count_private=true"/>
-  <img align="right" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JanieleCristina006&layout=compact&langs_count=16&theme=great-gatsby"/>
-</div>
-<br>
+🎓 Estudante de Ciência da Computação — 7º período  
+💻 Desenvolvedora Front-End apaixonada por transformar designs em experiências reais  
+🚀 Buscando uma oportunidade como Dev Júnior
 
-<div  align="center"> 
-  <div style="display: inline_block"><br>
-    <img align="left" height="250" alt="coding-time" src="https://media.licdn.com/dms/image/C4D22AQE3GqjIb7qKlA/feedshare-shrink_800/0/1677525430425?e=2147483647&v=beta&t=qPlmGdPDc6boYc30TVrP5lZDj1OWlVSTjckqIFe5eSc">
-    <h1 align="center">Melhores Tecnologias <3</h1>
-    <img align="center" height="30" width="40" alt="js-icon"  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-    <img align="center" height="30" width="40" alt="html-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-    <img align="center" height="30" width="40" alt="css-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-    <img align="center" height="30" width="40" alt="c-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg">
-    <img align="center" height="30" width="40" alt="nodejs-icon" src="https://raw.githubusercontent.com/jmnote/z-icons/master/svg/cpp.svg">
-   </div>
-    
-  
-  <h1 align="center">Redes Sociais</h1>
-    <a href = "mailto: janielecristina81@gmail.com">
-      <img width="30" src="https://github.com/LuigiGf/LuigiGf/blob/main/gmail.svg">
-    </a>
-    <a href = "https://www.linkedin.com/in/janiele-cristina-294283251/">
-      <img width="25" src="https://github.com/LuigiGf/LuigiGf/blob/main/linkedin.svg">
-    </a>  
-    <a href = "https://www.instagram.com/janiele.cristina.946/?igshid=YmMyMTA2M2Y%3D">
-      <img width="25" src="https://github.com/LuigiGf/LuigiGf/blob/main/instagram.png">
-    </a>
+### 💻 Minhas Tecnologias Favoritas
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" height="40" alt="HTML" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" height="40" alt="CSS" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" height="40" alt="JavaScript" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" height="40" alt="React" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" height="40" alt="Bootstrap" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" height="40" alt="Git" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" height="40" alt="GitHub" />
+  <img src="https://styled-components.com/logo.png" height="40" alt="Styled Components" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" height="40" alt="Tailwind CSS" />
 </div>
+
+---
+
+### 📊 GitHub Stats
+
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=JanieleCristina006&show_icons=true&theme=great-gatsby&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JanieleCristina006&layout=compact&langs_count=10&theme=great-gatsby"/>
+</div>
+
+---
+
+### 📱 Redes Sociais
+
+<div align="center">
+  <a href="mailto:janielecristina81@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://www.linkedin.com/in/janiele-cristina-294283251/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://www.instagram.com/janiele.cristina.946/">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+  </a>
+</div>
+
+---
+
+### 🐍 Snake Contribution
 
 ![Snake animation](https://github.com/JanieleCristina006/JanieleCristina006/blob/output/github-contribution-grid-snake.svg)
-  
-
