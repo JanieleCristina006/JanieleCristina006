@@ -4,7 +4,7 @@
 💻 Desenvolvedora Front-End apaixonada por transformar designs em experiências reais  
 🚀 Buscando uma oportunidade como Dev Júnior
 
-### 💻 Minhas Tecnologias Favoritas
+### 💻 Minhas Tecnologias
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" height="40" alt="HTML" />
