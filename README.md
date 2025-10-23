@@ -4,6 +4,8 @@
 💻 Desenvolvedora Front-End apaixonada por transformar designs em experiências reais  
 🚀 Buscando uma oportunidade como Dev Júnior
 
+---
+
 ### 💻 Minhas Tecnologias
 
 <div align="center">
@@ -43,8 +45,9 @@
   </a>
 </div>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/JanieleCristina006/JanieleCristina006/output/pacman-contribution-graph-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/JanieleCristina006/JanieleCristina006/output/pacman-contribution-graph.svg">
-  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/JanieleCristina006/JanieleCristina006/output/pacman-contribution-graph.svg">
-</picture>
+---
+
+### 🐍 GitHub Contribution Snake
+
+<img alt="GitHub Snake" src="https://raw.githubusercontent.com/JanieleCristina006/JanieleCristina006/output/github-contribution-grid-snake.svg" />
+
