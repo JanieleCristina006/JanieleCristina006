@@ -1,257 +1,142 @@
-<h1 align="center">Olá! 👋 Eu sou a Janiele Cristina</h1>
+<div align="center">
 
-<h3 align="center">
-💻 Desenvolvedora Full Stack Júnior | React • Node.js • TypeScript
-</h3>
-
-<p align="center">
-Apaixonada por tecnologia, desenvolvimento web e aprendizado contínuo.
-</p>
-
----
-
-## 🚀 Sobre mim
-
-🎓 Estudante de Ciência da Computação
-
-💼 Desenvolvedora Full Stack Júnior
-
-📍 Alfenas - Minas Gerais
-
-🌱 Atualmente estudando **NestJS**, arquitetura de software e boas práticas de backend.
-
-🎯 Buscando oportunidades como **Desenvolvedora Full Stack**, **Backend Node.js** ou **Frontend React**.
-
----
-
-## 💻 Tecnologias
-
-### Front-end
+# 👋 Olá, eu sou a Janiele Cristina!
 
 <p>
-<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,tailwind,vite" />
+Desenvolvedora Full Stack apaixonada por Backend, arquitetura de software e criação de aplicações modernas.
 </p>
 
-### Back-end
+<br>
+
+<h3><code>janiele@github:~$ ./contributions.sh</code></h3>
+
+<img src="./contrib-heatmap.svg" width="860"/>
+
+<br><br>
+
+<h3><code>janiele@github:~$ whoami</code></h3>
+
+<table>
+<tr>
+
+<td valign="top">
+<img src="./avi-ascii.svg" width="370"/>
+</td>
+
+<td valign="top">
+<img src="./info-card.svg" width="490"/>
+</td>
+
+</tr>
+</table>
+
+<br>
+
+<h3><code>janiele@github:~$ ls technologies</code></h3>
 
 <p>
-<img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,prisma" />
+
+<img src="https://skillicons.dev/icons?i=react,ts,nodejs,nestjs,express,postgres,prisma,git,github,vscode,tailwind"/>
+
 </p>
 
-### Banco de Dados
+<br>
 
-<p>
-<img src="https://skillicons.dev/icons?i=postgres,supabase,firebase" />
-</p>
+<h3><code>janiele@github:~$ ls projects</code></h3>
 
-### Ferramentas
+</div>
 
-<p>
-<img src="https://skillicons.dev/icons?i=git,github,postman,vscode" />
-</p>
+<table>
+<tr>
 
----
+<td width="50%">
 
-# 📚 Atualmente estudando
+### 💳 Sistema de Mensalidades
 
-- NestJS
-- Arquitetura em Camadas
-- SOLID
-- Clean Code
-- JWT
-- Prisma ORM
+Sistema completo para gerenciamento de clientes, planos, assinaturas e pagamentos.
+
+**Stack**
+
+- Node.js
+- Express
+- Prisma
 - PostgreSQL
-- Docker
+- JWT
+- TypeScript
 
----
+</td>
 
-# 🚀 Principais Projetos
+<td width="50%">
 
-## 💳 Sistema de Mensalidades
+### 🍕
 
-Sistema completo para gerenciamento de:
+API de Pizzaria
 
-- Clientes
-- Planos
-- Assinaturas
-- Pagamentos
-- Administradores
-- Login JWT
-- Upload de imagens
-- Recuperação de senha
-- Dashboard
-- Automações com Cron
+API REST com autenticação, pedidos e gerenciamento de produtos.
 
-### Tecnologias
+**Stack**
 
-```
-Node.js
-TypeScript
-Express
-Prisma
-PostgreSQL
-JWT
-Zod
-Supabase
-Multer
-Node Cron
-Nodemailer
-```
+- Node.js
+- Express
+- PostgreSQL
+- Prisma
+- JWT
 
-🔗 **Repositório**
+</td>
 
-https://github.com/JanieleCristina006/api-sistema-mensalidades
+</tr>
 
----
+<tr>
 
-## 🖥️ Painel Administrativo
+<td width="50%">
 
-Frontend completo consumindo a API de Mensalidades.
+### 🚗 WebCarros
 
-### Recursos
+Sistema para gerenciamento de veículos.
 
-- Dashboard
-- Gráficos
-- Login
-- Cadastro
-- Paginação
-- Tema Escuro
-- React Hook Form
-- Validações
-- Filtros
+**Stack**
 
-### Tecnologias
+- React
+- TypeScript
+- Tailwind
+- Node.js
 
-```
-React
-TypeScript
-Vite
-Tailwind CSS
-React Router
-React Hook Form
-Zod
-ApexCharts
-```
+</td>
 
-🔗 Repositório
+<td width="50%">
 
-https://github.com/JanieleCristina006/sistema_mensalidades_front
+### 🚀 Atualmente
 
-🌐 Deploy
+- 📚 Estudando NestJS
+- ⚡ Aprendendo arquitetura backend
+- 💚 Em busca de oportunidades como Desenvolvedora Full Stack Júnior
 
-https://sistemamensalidades.vercel.app/
+</td>
 
----
+</tr>
 
-## 🍕
+</table>
 
-Pizzaria API
-
-API REST para gerenciamento de pizzaria.
-
-### Recursos
-
-- Login JWT
-- Categorias
-- Produtos
-- Upload
-- Permissões
-- Arquitetura em Camadas
-
-🔗
-
-https://github.com/JanieleCristina006/pizzaria-api
-
----
-
-## 🚗 WebCarros
-
-Sistema para anúncios de veículos.
-
-### Recursos
-
-- Cadastro
-- Login
-- Upload
-- Dashboard
-- Busca
-- Galeria
-- WhatsApp
-
-🔗
-
-https://github.com/JanieleCristina006/web_carros
-
----
-
-# 📊 GitHub Stats
-
-<p align="center">
-
-<img height="170em" src="https://github-readme-stats.vercel.app/api?username=JanieleCristina006&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-
-<img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JanieleCristina006&layout=compact&langs_count=8&theme=tokyonight"/>
-
-</p>
-
----
-
-# 🔥 GitHub Streak
-
-<p align="center">
-
-<img src="https://streak-stats.demolab.com?user=JanieleCristina006&theme=tokyonight"/>
-
-</p>
-
----
-
-# 🏆 GitHub Trophies
-
-<p align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=JanieleCristina006&theme=tokyonight&row=1&column=7"/>
-
-</p>
-
----
-
-# 📈 Atividade
-
-<p align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=JanieleCristina006&theme=tokyo-night"/>
-
-</p>
-
----
-
-# 📫 Vamos nos conectar?
-
-<p>
-
-<a href="https://www.linkedin.com/in/janiele-cristina/">
-<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
-
-<a href="mailto:janielecristina539@gmail.com">
-<img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
-</a>
-
-<a href="https://portifolio-d42a.vercel.app/">
-<img src="https://img.shields.io/badge/Portfólio-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
-</a>
-
-</p>
-
----
+<br>
 
 <div align="center">
 
-### 💙 Obrigada por visitar meu perfil!
+<h3><code>janiele@github:~$ github stats</code></h3>
 
-*"A tecnologia muda o mundo. Aprender continuamente é a melhor forma de fazer parte dessa transformação."*
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=JanieleCristina006&show_icons=true&theme=github_dark&hide_border=true"/>
 
-⭐ Se algum projeto te interessar, deixe uma estrela!
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JanieleCristina006&layout=compact&theme=github_dark&hide_border=true"/>
+
+<br><br>
+
+<h3><code>janiele@github:~$ cat contact.txt</code></h3>
+
+<a href="https://www.linkedin.com/in/janiele-cristina/">
+<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin"/>
+</a>
+
+<a href="mailto:janielecristina539@gmail.com">
+<img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail"/>
+</a>
 
 </div>
