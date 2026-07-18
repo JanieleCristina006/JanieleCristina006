@@ -1,11 +1,11 @@
 """
-Build a neofetch-style info card SVG (Andrew6rant style) to sit to the RIGHT of
-the ASCII portrait: colored key/value rows for work experience, tech stack, and
-highlights -- NOT GitHub stats (the contribution graph covers those).
+Gera um cartão SVG no estilo neofetch para ficar à direita do retrato ASCII:
+linhas coloridas de chave/valor com experiência, tecnologias e destaques, sem
+estatísticas do GitHub, porque o gráfico de contribuições já cobre isso.
 
-Static content, hand-authored below. Lines fade/slide in on a short stagger so
-it feels like the panel is printing alongside the portrait. STATIC=1 emits the
-frozen state for Quick Look previews.
+O conteúdo é estático e editado abaixo. As linhas aparecem com um pequeno
+atraso entre elas para parecer que o painel está sendo impresso ao lado do
+retrato. STATIC=1 emite o estado congelado para pré-visualizações.
 """
 import html
 import os
@@ -14,7 +14,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "info-card.svg")
 STATIC = bool(os.environ.get("STATIC"))
 
-W, H = 480, 376
+W, H = 480, 480
 PAD = 20
 TITLEBAR_H = 30
 KEY_X = PAD
@@ -26,46 +26,46 @@ BG2 = "#111722"
 FRAME = "#30363d"
 MUTED = "#7d8590"
 INK = "#c9d1d9"
-KEY = "#ffa657"      # orange keys (matches Andrew)
-SECTION = "#58a6ff"  # blue section headers
+KEY = "#ffa657"      # chaves em laranja
+SECTION = "#58a6ff"  # títulos de seção em azul
 GREEN = "#3fb950"
 ACCENT = "#22d3ee"
 
-# content model: tuples describing each row
-# ("host",)                    -> "avi@github" + rule
-# ("kv", key, value)           -> orange key + light value
-# ("sec", title)               -> blue "— title —" rule
-# ("bul", text)                -> green dot + light text
-# ("gap",)                     -> vertical space
+# modelo de conteúdo: tuplas que descrevem cada linha
+# ("host",)                    -> "janiele@github" + linha
+# ("kv", chave, valor)         -> chave laranja + valor claro
+# ("sec", título)              -> título azul + linha
+# ("bul", texto)               -> ponto verde + texto claro
+# ("gap",)                     -> espaço vertical
 ROWS = [
     ("host",),
 
     ("kv", "Nome", "Janiele Cristina"),
-    ("kv", "Cargo", "Desenvolvedora Full Stack Júnior"),
+    ("kv", "Cargo", "Desenvolvedora de aplicações completas Júnior"),
     ("kv", "Cidade", "Alfenas - MG"),
-    ("kv", "Objetivo", "Desenvolvimento Backend"),
+    ("kv", "Objetivo", "Desenvolvimento Back-end"),
 
     ("gap",),
 
     ("sec", "Tecnologias"),
 
-    ("kv", "Frontend", "React, TypeScript, Tailwind"),
-    ("kv", "Backend", "Node.js, Express, NestJS"),
+    ("kv", "Front-end", "React, TypeScript, Tailwind"),
+    ("kv", "Back-end", "Node.js, Express, NestJS"),
     ("kv", "Banco", "PostgreSQL, Prisma"),
     ("kv", "Ferramentas", "Git, GitHub, JWT, Zod"),
-    ("kv", "Cloud", "Supabase, Vercel"),
+    ("kv", "Nuvem", "Supabase, Vercel"),
 
     ("gap",),
 
     ("sec", "Atualmente"),
 
     ("bul", "Estudando NestJS"),
-    ("bul", "Criando projetos Full Stack"),
-    ("bul", "Buscando oportunidade como Dev Júnior"),
+    ("bul", "Criando aplicações completas"),
+    ("bul", "Buscando oportunidade como desenvolvedora júnior"),
 
     ("gap",),
 
-    ("sec", "Projetos"),
+    ("sec", "Destaques"),
 
     ("bul", "Sistema de Mensalidades"),
     ("bul", "API de Pizzaria"),
@@ -77,7 +77,7 @@ def esc(s):
 
 
 def rise(inner, i):
-    """fade + slight upward slide, staggered by row index; freezes visible."""
+    """Aplica fade e subida leve, com atraso por linha; congela visível."""
     if STATIC:
         return f"<g>{inner}</g>"
     delay = 0.15 + i * 0.06
@@ -100,7 +100,7 @@ parts = [
 for i, dotcol in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
     parts.append(f'<circle cx="{PAD + i*16}" cy="{TITLEBAR_H/2}" r="5" fill="{dotcol}"/>')
 parts.append(f'<text x="{W/2}" y="{TITLEBAR_H/2 + 4}" fill="{MUTED}" font-size="12" '
-             f'text-anchor="middle">avi@github: ~$ neofetch</text>')
+             f'text-anchor="middle">janiele@github: ~$ perfil</text>')
 
 y = TITLEBAR_H + 30
 for i, row in enumerate(ROWS):
@@ -110,9 +110,9 @@ for i, row in enumerate(ROWS):
         continue
     if kind == "host":
         inner = (f'<text x="{KEY_X}" y="{y:.1f}" font-size="14" font-weight="700">'
-                 f'<tspan fill="{GREEN}">avi</tspan><tspan fill="{MUTED}">@</tspan>'
+                 f'<tspan fill="{GREEN}">janiele</tspan><tspan fill="{MUTED}">@</tspan>'
                  f'<tspan fill="{ACCENT}">github</tspan></text>'
-                 f'<line x1="{KEY_X+96}" y1="{y-4:.1f}" x2="{W-PAD}" y2="{y-4:.1f}" '
+                 f'<line x1="{KEY_X+132}" y1="{y-4:.1f}" x2="{W-PAD}" y2="{y-4:.1f}" '
                  f'stroke="{FRAME}" stroke-opacity="0.8"/>')
     elif kind == "sec":
         title = esc(row[1])
@@ -135,6 +135,6 @@ for i, row in enumerate(ROWS):
 
 parts.append("</svg>")
 svg = "".join(parts)
-with open(OUT, "w") as f:
+with open(OUT, "w", encoding="utf-8") as f:
     f.write(svg)
-print("wrote", OUT, len(svg), "bytes;", W, "x", H, "content_bottom", round(y))
+print("gerou", OUT, len(svg), "bytes;", W, "x", H, "conteudo_ate", round(y))

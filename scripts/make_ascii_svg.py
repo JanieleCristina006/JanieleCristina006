@@ -1,16 +1,13 @@
 """
-Convert a portrait photo into a CLEAN, monochrome ASCII-art SVG (Andrew6rant
-style: one light-gray color, subject isolated on a dark background) that "types"
-itself in like a terminal, then holds.
+Converte uma foto de retrato em um SVG limpo de arte ASCII monocromática: uma
+cor cinza clara, pessoa isolada em fundo escuro e impressão como terminal.
 
-Monochrome is deliberate -- per-character rainbow color is what makes ASCII
-portraits look noisy. One fill color + a good density ramp + high contrast (so a
-busy background washes out to blank) reads as neat and legible.
+O visual monocromático é intencional. Uma única cor, uma boa escala de densidade
+e alto contraste deixam o retrato mais nítido e legível.
 
-GitHub renders SVGs embedded via <img> and runs their SMIL animations there (JS
-does not run). Each row is revealed with a left-to-right clip wipe plus a small
-block cursor riding the wipe edge, staggered top -> bottom, so the whole
-portrait prints once and freezes.
+O GitHub renderiza SVGs embutidos via <img> e executa animações SMIL. Cada linha
+é revelada da esquerda para a direita com um recorte e um cursor pequeno,
+escalonado de cima para baixo, até o retrato inteiro ficar congelado.
 """
 from PIL import Image, ImageEnhance, ImageOps, ImageFilter
 import html
@@ -18,8 +15,8 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-# defaults to the prepped grayscale image (see prep_photo.py), which already has
-# the background removed + local contrast applied.
+# usa por padrão a imagem preparada em tons de cinza (veja prep_photo.py), que
+# já tem o fundo removido e contraste local aplicado.
 SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "..", "source-prepped.png")
 OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "..", "avi-ascii.svg")
 
@@ -27,19 +24,19 @@ COLS = 100
 ROWS = 53
 CELL_W = 8
 CELL_H = 15
-RAMP = " .`:-=+*cs#%@"  # bright(sparse) -> dark(dense); leading space clears bg
+RAMP = " .`:-=+*cs#%@"  # claro(esparso) -> escuro(denso); espaço limpa o fundo
 
-# the prepped image already has bg removed + CLAHE local contrast, so only
-# light global tuning is needed here.
+# a imagem preparada já tem fundo removido e contraste local via CLAHE, então
+# só um ajuste global leve é necessário aqui.
 CONTRAST = 1.05
 BRIGHTNESS = 1.0
-GAMMA = 1.18          # >1 brightens mids -> face lands in sparser chars
+GAMMA = 1.18          # >1 clareia tons médios para usar caracteres mais leves
 SHARPEN = False
-WHITE_FLOOR = 0.80    # luminance above this is forced to blank (space)
+WHITE_FLOOR = 0.80    # luminosidade acima disso vira espaço em branco
 
 PAD = 20
 TITLEBAR_H = 30
-STATUS_H = 30
+STATUS_H = 44
 ART_W = COLS * CELL_W
 ART_H = ROWS * CELL_H
 CANVAS_W = ART_W + PAD * 2
@@ -49,15 +46,15 @@ BG = "#0d1117"
 BG2 = "#111722"
 FRAME = "#30363d"
 TITLE_TEXT = "#7d8590"
-INK = "#c9d1d9"      # the single ascii color (matches Andrew6rant)
+INK = "#c9d1d9"      # cor única da arte ASCII
 CURSOR = "#c9d1d9"
 
-# ---- reveal timing (one-shot; a cursor rasters top -> bottom) -------------
+# ---- tempo da revelação, executada uma vez -------------------------------
 ROW_DUR = 0.11
-STAGGER = 0.11       # == ROW_DUR -> a single cursor sweeping down
+STAGGER = 0.11       # igual ao ROW_DUR para um cursor varrer de cima a baixo
 
-# ---- 1. sample the image into a COLS x ROWS grayscale grid ----------------
-im = Image.open(SRC).convert("L")               # grayscale
+# ---- 1. amostra a imagem em uma grade COLS x ROWS em tons de cinza --------
+im = Image.open(SRC).convert("L")               # tons de cinza
 if SHARPEN:
     im = im.filter(ImageFilter.UnsharpMask(radius=2, percent=140, threshold=2))
 im = ImageEnhance.Brightness(im).enhance(BRIGHTNESS)
@@ -65,7 +62,7 @@ im = ImageEnhance.Contrast(im).enhance(CONTRAST)
 im = im.resize((COLS, ROWS), Image.LANCZOS)
 px = im.load()
 
-STATIC = bool(os.environ.get("STATIC"))  # emit frozen state for previews
+STATIC = bool(os.environ.get("STATIC"))  # emite estado congelado para pré-visualizações
 
 rows_txt = []
 for y in range(ROWS):
@@ -83,7 +80,7 @@ for y in range(ROWS):
 
 art_top = TITLEBAR_H + PAD * 0.35
 
-# ---- 2. assemble SVG ------------------------------------------------------
+# ---- 2. monta o SVG -------------------------------------------------------
 parts = []
 parts.append(
     f'<svg xmlns="http://www.w3.org/2000/svg" width="{CANVAS_W}" height="{CANVAS_H}" '
@@ -103,9 +100,9 @@ parts.append(f'<line x1="0" y1="{TITLEBAR_H}" x2="{CANVAS_W}" y2="{TITLEBAR_H}" 
 for i, dotcol in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
     parts.append(f'<circle cx="{PAD + i*16}" cy="{TITLEBAR_H/2}" r="5" fill="{dotcol}"/>')
 parts.append(f'<text x="{CANVAS_W/2}" y="{TITLEBAR_H/2 + 4}" fill="{TITLE_TEXT}" font-size="12" '
-             f'text-anchor="middle">avi@github: ~$ ./portrait.sh</text>')
+             f'text-anchor="middle">janiele@github: ~$ retrato</text>')
 
-# one <text> per row (single color -> no per-char markup, tiny file)
+# um <text> por linha, sem marcação por caractere, para manter o arquivo leve
 font_size = CELL_H * 0.86
 for ry, line in enumerate(rows_txt):
     y = art_top + ry * CELL_H + CELL_H * 0.74
@@ -133,18 +130,19 @@ for ry, line in enumerate(rows_txt):
         f'<set attributeName="opacity" to="0" begin="{delay+ROW_DUR:.3f}s"/></rect>'
     )
 
-# status bar with a steady blinking cursor
+# barra de status com cursor piscando
 status_line_y = TITLEBAR_H + ART_H + PAD * 0.35
 status_y = status_line_y + 19
 parts.append(f'<line x1="0" y1="{status_line_y:.1f}" x2="{CANVAS_W}" y2="{status_line_y:.1f}" stroke="{FRAME}"/>')
 parts.append(f'<text x="{PAD}" y="{status_y:.1f}" fill="{TITLE_TEXT}" font-size="13">'
-             f'avi@github:~$ whoami <tspan fill="{INK}">Avi Vashishta</tspan></text>')
-parts.append(f'<rect x="{PAD+196}" y="{status_y-12:.1f}" width="8" height="14" fill="{INK}">'
+             f'janiele@github:~$ quem-sou</text>')
+parts.append(f'<text x="{PAD}" y="{status_y+17:.1f}" fill="{INK}" font-size="13">Janiele Cristina</text>')
+parts.append(f'<rect x="{PAD+132}" y="{status_y+5:.1f}" width="8" height="14" fill="{INK}">'
              f'<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.51;1" '
              f'dur="1s" repeatCount="indefinite"/></rect>')
 
 parts.append("</svg>")
 svg = "".join(parts)
-with open(OUT, "w") as f:
+with open(OUT, "w", encoding="utf-8") as f:
     f.write(svg)
-print("wrote", OUT, len(svg), "bytes;", CANVAS_W, "x", CANVAS_H)
+print("gerou", OUT, len(svg), "bytes;", CANVAS_W, "x", CANVAS_H)

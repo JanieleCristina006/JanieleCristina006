@@ -1,4 +1,4 @@
-name: Generate Snake
+name: Gerar cobra
 
 on:
   schedule:

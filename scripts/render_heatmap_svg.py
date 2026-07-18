@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-Render data/contributions.json (produced by fetch_contributions.py) as a proper
-GitHub-style contribution heatmap SVG: a grid of rounded, colored BOXES in the
-classic 53-week x 7-day calendar, revealed once with a diagonal line-after-line
-slide-down (CSS keyframes, plays on load then freezes -- no looping "glow"), a
-Less->More legend, and a real stats footer.
+Renderiza data/contributions.json (gerado por fetch_contributions.py) como um
+SVG de mapa de calor de contribuições no estilo GitHub: uma grade de caixas
+arredondadas e coloridas no calendário clássico de 53 semanas por 7 dias,
+revelada uma vez em cascata diagonal com CSS, sem repetição. Inclui legenda
+Menos->Mais e rodapé com estatísticas reais.
 
-Run by .github/workflows/update-profile-art.yml after fetch_contributions.py.
+Executado por .github/workflows/update-profile-art.yml depois de
+fetch_contributions.py.
 """
 import datetime
 import json
@@ -16,7 +17,7 @@ HERE = os.path.dirname(__file__)
 IN_PATH = os.path.join(HERE, "..", "data", "contributions.json")
 OUT_PATH = os.path.join(HERE, "..", "contrib-heatmap.svg")
 
-# GitHub-ish green ramp: empty -> brightest. Level 5 is a brighter neon top end.
+# escala verde inspirada no GitHub: vazio -> mais brilhante
 PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 
 CELL = 12
@@ -36,9 +37,9 @@ ACCENT = "#22d3ee"
 GREEN = "#39d353"
 GOLD = "#f2cc60"
 
-# reveal timing (one-shot)
-COL_T = 0.018   # per-column delay contribution (left -> right sweep)
-ROW_T = 0.045   # per-row delay contribution (top -> bottom cascade)
+# tempo da revelação, executada uma vez
+COL_T = 0.018   # atraso por coluna, varrendo da esquerda para a direita
+ROW_T = 0.045   # atraso por linha, em cascata de cima para baixo
 CELL_DUR = 0.42
 
 
@@ -58,7 +59,7 @@ def level_for(count):
 
 def build_grid(days):
     first = datetime.date.fromisoformat(days[0]["date"])
-    lead_pad = (first.weekday() + 1) % 7  # sunday=0
+    lead_pad = (first.weekday() + 1) % 7  # domingo=0
     grid = []
     col = [None] * lead_pad
     for d in days:
@@ -75,6 +76,18 @@ def build_grid(days):
             col.append(None)
         grid.append(col)
     return grid
+
+
+def numero_pt(n):
+    return f"{n:,}".replace(",", ".")
+
+
+def dias_pt(n):
+    return "dia" if n == 1 else "dias"
+
+
+def contribuicoes_pt(n):
+    return "contribuição" if n == 1 else "contribuições"
 
 
 def render(data):
@@ -128,7 +141,7 @@ def render(data):
     for i, dotcol in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
         parts.append(f'<circle cx="{PAD + i*16}" cy="{TITLEBAR_H/2}" r="5" fill="{dotcol}"/>')
     parts.append(f'<text x="{canvas_w/2}" y="{TITLEBAR_H/2 + 4}" fill="{MUTED}" font-size="12" '
-                 f'text-anchor="middle">janiele@github: ~$ git log --graph</text>')
+                 f'text-anchor="middle">janiele@github: ~/grafico-contribuicoes</text>')
 
     grid_top = TITLEBAR_H + TOP_LABEL_H
     grid_left = PAD + LEFT_LABEL_W
@@ -137,11 +150,11 @@ def render(data):
         x = grid_left + ci * STEP
         parts.append(f'<text x="{x}" y="{TITLEBAR_H + 14}" fill="{MUTED}" font-size="10">{label}</text>')
 
-    for wi, wname in [(1, "Mon"), (3, "Wed"), (5, "Fri")]:
+    for wi, wname in [(1, "Seg"), (3, "Qua"), (5, "Sex")]:
         y = grid_top + wi * STEP + CELL * 0.78
         parts.append(f'<text x="{PAD}" y="{y:.1f}" fill="{MUTED}" font-size="9">{wname}</text>')
 
-    # the boxes -- each a rounded rect, diagonal slide-down reveal (once, freeze)
+    # caixas arredondadas com revelação diagonal, executada uma vez
     for ci, column in enumerate(grid):
         gx = grid_left + ci * STEP
         for ri, cell in enumerate(column):
@@ -150,22 +163,22 @@ def render(data):
             date_s, count, lvl = cell
             gy = grid_top + ri * STEP
             delay = ci * COL_T + ri * ROW_T
-            plural = "s" if count != 1 else ""
+            contrib_text = contribuicoes_pt(count)
             parts.append(
                 f'<rect class="c" x="{gx}" y="{gy}" width="{CELL}" height="{CELL}" rx="2.5" '
                 f'fill="{PALETTE[lvl]}" style="animation-delay:{delay:.3f}s">'
-                f'<title>{date_s}: {count} contribution{plural}</title></rect>'
+                f'<title>{date_s}: {count} {contrib_text}</title></rect>'
             )
 
-    # legend: Less [][][][][] More (bottom-right of the grid)
+    # legenda: Menos [][][][][] Mais, no canto inferior direito da grade
     leg_y = grid_top + art_h + 6
     leg_x = canvas_w - PAD - (len(PALETTE) * (CELL - 1) + 70)
-    parts.append(f'<text x="{leg_x}" y="{leg_y + CELL*0.8:.1f}" fill="{MUTED}" font-size="10" text-anchor="end">Less</text>')
+    parts.append(f'<text x="{leg_x}" y="{leg_y + CELL*0.8:.1f}" fill="{MUTED}" font-size="10" text-anchor="end">Menos</text>')
     lx = leg_x + 8
     for lvl, color in enumerate(PALETTE):
         parts.append(f'<rect x="{lx}" y="{leg_y}" width="{CELL-1}" height="{CELL-1}" rx="2.2" fill="{color}"/>')
         lx += CELL
-    parts.append(f'<text x="{lx + 4}" y="{leg_y + CELL*0.8:.1f}" fill="{MUTED}" font-size="10">More</text>')
+    parts.append(f'<text x="{lx + 4}" y="{leg_y + CELL*0.8:.1f}" fill="{MUTED}" font-size="10">Mais</text>')
 
     sep_y = leg_y + CELL + 14
     parts.append(f'<line x1="0" y1="{sep_y}" x2="{canvas_w}" y2="{sep_y}" stroke="{FRAME}" stroke-opacity="0.25"/>')
@@ -177,27 +190,27 @@ def render(data):
     rng = data["range"]
 
     ly = sep_y + 24
-    # left column: big highlighted numbers; right column: context in muted
+    # coluna esquerda: números destacados; coluna direita: contexto suave
     parts.append(f'<text x="{PAD}" y="{ly}" font-size="13" fill="{GREEN}">'
-                 f'<tspan font-weight="700">{total:,}</tspan>'
-                 f'<tspan fill="{MUTED}"> contributions in the last year</tspan></text>')
+                 f'<tspan font-weight="700">{numero_pt(total)}</tspan>'
+                 f'<tspan fill="{MUTED}"> contribuições no último ano</tspan></text>')
     parts.append(f'<text x="{canvas_w - PAD}" y="{ly}" font-size="12" fill="{MUTED}" text-anchor="end">'
                  f'{rng["start"]} &#8594; {rng["end"]}</text>')
     ly += 24
-    parts.append(f'<text x="{PAD}" y="{ly}" font-size="13" fill="{MUTED}">current streak '
-                 f'<tspan fill="{ACCENT}" font-weight="700">{cs} days</tspan>'
-                 f'<tspan fill="{MUTED}">   &#183;   longest </tspan>'
-                 f'<tspan fill="{ACCENT}" font-weight="700">{ls} days</tspan></text>')
+    parts.append(f'<text x="{PAD}" y="{ly}" font-size="13" fill="{MUTED}">sequência atual '
+                 f'<tspan fill="{ACCENT}" font-weight="700">{cs} {dias_pt(cs)}</tspan>'
+                 f'<tspan fill="{MUTED}">   &#183;   maior sequência </tspan>'
+                 f'<tspan fill="{ACCENT}" font-weight="700">{ls} {dias_pt(ls)}</tspan></text>')
     parts.append(f'<text x="{canvas_w - PAD}" y="{ly}" font-size="12" fill="{MUTED}" text-anchor="end">'
-                 f'best day <tspan fill="{GOLD}" font-weight="700">{best["count"]}</tspan> on {best["date"]}</text>')
+                 f'melhor dia <tspan fill="{GOLD}" font-weight="700">{best["count"]}</tspan> em {best["date"]}</text>')
 
     parts.append("</svg>")
     return "".join(parts)
 
 
 if __name__ == "__main__":
-    data = json.load(open(IN_PATH))
+    data = json.load(open(IN_PATH, encoding="utf-8"))
     svg = render(data)
-    with open(OUT_PATH, "w") as f:
+    with open(OUT_PATH, "w", encoding="utf-8") as f:
         f.write(svg)
-    print(f"wrote {OUT_PATH} ({len(svg)} bytes)")
+    print(f"gerou {OUT_PATH} ({len(svg)} bytes)")

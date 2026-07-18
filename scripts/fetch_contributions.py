@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """
-Scrape real daily contribution counts from GitHub's public, unauthenticated
-contributions endpoint (the same fragment the profile page itself uses) and
-write data/contributions.json with the raw days plus derived stats
-(current streak, longest streak, best day, monthly totals).
+Coleta contagens diárias reais de contribuições no endpoint público e sem
+autenticação do GitHub, o mesmo fragmento usado pela página de perfil, e grava
+data/contributions.json com os dias brutos e estatísticas derivadas.
 
-No token, no auth, no GraphQL -- just the public HTML GitHub already serves.
-Run daily by .github/workflows/update-profile-art.yml.
+Sem token, sem autenticação e sem GraphQL: apenas o HTML público que o GitHub já
+serve. Executado diariamente por .github/workflows/update-profile-art.yml.
 """
 import datetime
 import json
@@ -29,7 +28,7 @@ def fetch_days():
 
     cells = soup.select("td.ContributionCalendar-day")
     if not cells:
-        print("no calendar cells found -- github markup may have changed", file=sys.stderr)
+        print("nenhuma célula do calendário encontrada; o HTML do GitHub pode ter mudado", file=sys.stderr)
         sys.exit(1)
 
     days = []
@@ -54,7 +53,7 @@ def fetch_days():
 def compute_current_streak(days):
     idx = len(days) - 1
     if days[idx]["count"] == 0:
-        idx -= 1  # today isn't over yet -- don't break the streak on it
+        idx -= 1  # o dia atual ainda não acabou; não quebre a sequência por ele
     streak = 0
     end_idx = idx
     while idx >= 0 and days[idx]["count"] > 0:
@@ -116,8 +115,8 @@ if __name__ == "__main__":
     days = fetch_days()
     data = build_data(days)
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
-    with open(OUT_PATH, "w") as f:
+    with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
-    print(f"wrote {OUT_PATH}: {data['total_contributions']} contributions, "
-          f"current streak {data['current_streak']['length']}, "
-          f"longest streak {data['longest_streak']['length']}")
+    print(f"gerou {OUT_PATH}: {data['total_contributions']} contribuições, "
+          f"sequência atual {data['current_streak']['length']}, "
+          f"maior sequência {data['longest_streak']['length']}")

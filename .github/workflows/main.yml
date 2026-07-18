@@ -1,4 +1,4 @@
-name: Generate Snake Animation
+name: Gerar animação da cobra
 
 on:
   schedule:
@@ -16,11 +16,11 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Commit and Push Snake SVG
+      - name: Salvar e enviar SVG da cobra
         uses: EndBug/add-and-commit@v9
         with:
           author_name: github-actions
           author_email: github-actions@github.com
-          message: "generated snake animation"
+          message: "animação da cobra gerada"
           add: "dist/*"
 

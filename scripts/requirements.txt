@@ -1,7 +1,7 @@
 requests==2.32.3
 beautifulsoup4==4.12.3
 
-# portrait-only (not needed by the daily workflow):
+# apenas para o retrato; não é necessário no fluxo diário:
 pillow
 numpy
 opencv-python
