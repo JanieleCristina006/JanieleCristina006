@@ -24,7 +24,7 @@ Desenvolvedora de aplicações completas apaixonada por Back-end, arquitetura de
 </td>
 
 <td valign="top">
-<img src="./info-card.svg" width="490"/>
+<img src="info-card.svg" width="490"/>
 </td>
 
 </tr>
