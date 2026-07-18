@@ -20,7 +20,7 @@ Desenvolvedora de aplicações completas apaixonada por Back-end, arquitetura de
 <tr>
 
 <td valign="top">
-<img src="./avi-ascii.svg" width="370"/>
+<img src="./avi-ascii.svg" width="490"/>
 </td>
 
 <td valign="top">
