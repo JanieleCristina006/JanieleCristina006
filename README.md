@@ -121,9 +121,6 @@ Sistema para gerenciamento de veículos.
 
 <div align="center">
 
-<h3><code>janiele@github:~$ estatisticas</code></h3>
-
-<div align="center">
 
 <h3><code>janiele@github:~$ estatisticas</code></h3>
 
