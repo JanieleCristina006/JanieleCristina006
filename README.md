@@ -2,8 +2,10 @@
 
 # 👋 Olá, eu sou a Janiele Cristina!
 
+### Desenvolvedora Full Stack Júnior
+
 <p>
-Desenvolvedora de aplicações completas apaixonada por Back-end, arquitetura de software e criação de aplicações modernas.
+Desenvolvo aplicações web completas, criando interfaces modernas com React e construindo APIs escaláveis com Node.js. Estou sempre estudando novas tecnologias e buscando evoluir como desenvolvedora, transformando ideias em soluções completas.
 </p>
 
 <br>
@@ -24,7 +26,7 @@ Desenvolvedora de aplicações completas apaixonada por Back-end, arquitetura de
 </td>
 
 <td valign="top">
-<img src="info-card.svg" width="490"/>
+<img src="./info-card.svg" width="490"/>
 </td>
 
 </tr>
@@ -36,7 +38,7 @@ Desenvolvedora de aplicações completas apaixonada por Back-end, arquitetura de
 
 <p>
 
-<img src="https://skillicons.dev/icons?i=react,ts,nodejs,nestjs,express,postgres,prisma,git,github,vscode,tailwind"/>
+<img src="https://skillicons.dev/icons?i=react,ts,nextjs,tailwind,nodejs,nestjs,express,postgres,prisma,supabase,git,github,vscode"/>
 
 </p>
 
@@ -47,40 +49,38 @@ Desenvolvedora de aplicações completas apaixonada por Back-end, arquitetura de
 </div>
 
 <table>
+
 <tr>
 
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 💳 Sistema de Mensalidades
 
-Sistema completo para gerenciamento de clientes, planos, assinaturas e pagamentos.
+Sistema Full Stack para gerenciamento de clientes, planos, assinaturas, pagamentos e administradores.
 
-**Tecnologias**
+**Stack**
 
+- React
+- TypeScript
 - Node.js
 - Express
 - Prisma
 - PostgreSQL
-- JWT
-- TypeScript
 
 </td>
 
-<td width="50%">
+<td width="50%" valign="top">
 
-### 🍕
+### 🚗 WebCarros
 
-API de Pizzaria
+Aplicação para cadastro e gerenciamento de veículos, com autenticação, dashboard e upload de imagens.
 
-API REST com autenticação, pedidos e gerenciamento de produtos.
+**Stack**
 
-**Tecnologias**
-
-- Node.js
-- Express
-- PostgreSQL
-- Prisma
-- JWT
+- React
+- TypeScript
+- Tailwind CSS
+- Supabase
 
 </td>
 
@@ -88,28 +88,30 @@ API REST com autenticação, pedidos e gerenciamento de produtos.
 
 <tr>
 
-<td width="50%">
+<td width="50%" valign="top">
 
-### 🚗 WebCarros
+### 🍕 API Pizzaria
 
-Sistema para gerenciamento de veículos.
+API REST com autenticação JWT, gerenciamento de categorias, produtos, pedidos e upload de imagens.
 
-**Tecnologias**
+**Stack**
 
-- React
-- TypeScript
-- Tailwind
 - Node.js
+- Express
+- Prisma
+- PostgreSQL
+- JWT
 
 </td>
 
-<td width="50%">
+<td width="50%" valign="top">
 
-### 🚀 Atualmente
+### 📚 Atualmente
 
-- 📚 Estudando NestJS
-- ⚡ Aprendendo arquitetura back-end
-- 💚 Em busca de oportunidades como Desenvolvedora Júnior de aplicações completas
+- 🚀 Desenvolvendo aplicações Full Stack
+- 📖 Estudando NestJS e Arquitetura de Software
+- 💡 Aprimorando boas práticas e Clean Code
+- 💚 Em busca de oportunidades como Desenvolvedora Full Stack Júnior
 
 </td>
 
@@ -121,7 +123,6 @@ Sistema para gerenciamento de veículos.
 
 <div align="center">
 
-
 <h3><code>janiele@github:~$ estatisticas</code></h3>
 
 <table>
@@ -129,15 +130,15 @@ Sistema para gerenciamento de veículos.
 
 <td align="center">
 <img
-  height="180"
-  src="https://github-readme-stats-lpww4patd-janielecristinas-projects.vercel.app/api?username=JanieleCristina006&show_icons=true&theme=github_dark&hide_border=true&locale=pt-br&v=2"
+height="180"
+src="https://github-readme-stats-lpww4patd-janielecristinas-projects.vercel.app/api?username=JanieleCristina006&show_icons=true&theme=github_dark&hide_border=true&locale=pt-br&v=2"
 />
 </td>
 
 <td align="center">
 <img
-  height="180"
-  src="https://github-readme-stats-lpww4patd-janielecristinas-projects.vercel.app/api/top-langs/?username=JanieleCristina006&layout=compact&theme=github_dark&hide_border=true&locale=pt-br&v=2"
+height="180"
+src="https://github-readme-stats-lpww4patd-janielecristinas-projects.vercel.app/api/top-langs/?username=JanieleCristina006&layout=compact&theme=github_dark&hide_border=true&locale=pt-br&v=2"
 />
 </td>
 
@@ -145,7 +146,10 @@ Sistema para gerenciamento de veículos.
 </table>
 
 </div>
+
 <br><br>
+
+<div align="center">
 
 <h3><code>janiele@github:~$ cat contato.txt</code></h3>
 
