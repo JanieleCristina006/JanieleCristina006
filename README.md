@@ -5,7 +5,7 @@
 ### Desenvolvedora Full Stack Júnior
 
 <p>
-Desenvolvo aplicações web completas, criando interfaces modernas com React e construindo APIs escaláveis com Node.js. Estou sempre estudando novas tecnologias e buscando evoluir como desenvolvedora, transformando ideias em soluções completas.
+Sou apaixonada por transformar ideias em aplicações completas. Desenvolvo interfaces modernas com React e construo APIs robustas com Node.js, sempre buscando escrever código limpo, escalável e de fácil manutenção.
 </p>
 
 <br>
@@ -16,7 +16,7 @@ Desenvolvo aplicações web completas, criando interfaces modernas com React e c
 
 <br><br>
 
-<h3><code>janiele@github:~$ quem-sou</code></h3>
+<h3><code>janiele@github:~$ whoami</code></h3>
 
 <table>
 <tr>
@@ -34,15 +34,11 @@ Desenvolvo aplicações web completas, criando interfaces modernas com React e c
 
 <br>
 
-<h3><code>janiele@github:~$ ls tecnologias</code></h3>
-
-<p>
+<h3><code>janiele@github:~$ ls stack</code></h3>
 
 <img src="https://skillicons.dev/icons?i=react,ts,nextjs,tailwind,nodejs,nestjs,express,postgres,prisma,supabase,git,github,vscode"/>
 
-</p>
-
-<br>
+<br><br>
 
 <h3><code>janiele@github:~$ ls projetos</code></h3>
 
@@ -54,7 +50,7 @@ Desenvolvo aplicações web completas, criando interfaces modernas com React e c
 
 <td width="50%" valign="top">
 
-### 💳 Sistema de Mensalidades
+## 💳 <a href="https://github.com/JanieleCristina006/api-sistema-mensalidades">Sistema de Mensalidades</a>
 
 Sistema Full Stack para gerenciamento de clientes, planos, assinaturas, pagamentos e administradores.
 
@@ -67,13 +63,19 @@ Sistema Full Stack para gerenciamento de clientes, planos, assinaturas, pagament
 - Prisma
 - PostgreSQL
 
+**Links**
+
+- 🌐 <a href="https://sistemamensalidades.vercel.app/">Demo</a>
+- 💻 <a href="https://github.com/JanieleCristina006/sistema_mensalidades_front">Front-end</a>
+- ⚙️ <a href="https://github.com/JanieleCristina006/api-sistema-mensalidades">Back-end</a>
+
 </td>
 
 <td width="50%" valign="top">
 
-### 🚗 WebCarros
+## 🚗 <a href="https://github.com/JanieleCristina006/web_carros">WebCarros</a>
 
-Aplicação para cadastro e gerenciamento de veículos, com autenticação, dashboard e upload de imagens.
+Sistema para anúncios de veículos com autenticação, upload de imagens e dashboard.
 
 **Stack**
 
@@ -81,6 +83,10 @@ Aplicação para cadastro e gerenciamento de veículos, com autenticação, dash
 - TypeScript
 - Tailwind CSS
 - Supabase
+
+**Links**
+
+- 💻 <a href="https://github.com/JanieleCristina006/web_carros">Repositório</a>
 
 </td>
 
@@ -90,9 +96,9 @@ Aplicação para cadastro e gerenciamento de veículos, com autenticação, dash
 
 <td width="50%" valign="top">
 
-### 🍕 API Pizzaria
+## 🍕 <a href="https://github.com/JanieleCristina006/pizzaria-api">API Pizzaria</a>
 
-API REST com autenticação JWT, gerenciamento de categorias, produtos, pedidos e upload de imagens.
+API REST para gerenciamento de usuários, categorias, produtos e pedidos.
 
 **Stack**
 
@@ -102,15 +108,20 @@ API REST com autenticação JWT, gerenciamento de categorias, produtos, pedidos 
 - PostgreSQL
 - JWT
 
+**Links**
+
+- 💻 <a href="https://github.com/JanieleCristina006/pizzaria-api">Repositório</a>
+
 </td>
 
 <td width="50%" valign="top">
 
-### 📚 Atualmente
+## 🚀 Atualmente
 
-- 🚀 Desenvolvendo aplicações Full Stack
-- 📖 Estudando NestJS e Arquitetura de Software
-- 💡 Aprimorando boas práticas e Clean Code
+- 📚 Estudando NestJS
+- 🏛️ Aprendando Arquitetura de Software
+- ⚙️ Desenvolvendo aplicações Full Stack
+- 💡 Evoluindo em boas práticas e Clean Code
 - 💚 Em busca de oportunidades como Desenvolvedora Full Stack Júnior
 
 </td>
@@ -123,7 +134,7 @@ API REST com autenticação JWT, gerenciamento de categorias, produtos, pedidos 
 
 <div align="center">
 
-<h3><code>janiele@github:~$ estatisticas</code></h3>
+<h3><code>janiele@github:~$ github-stats</code></h3>
 
 <table>
 <tr>
@@ -145,11 +156,7 @@ src="https://github-readme-stats-lpww4patd-janielecristinas-projects.vercel.app/
 </tr>
 </table>
 
-</div>
-
 <br><br>
-
-<div align="center">
 
 <h3><code>janiele@github:~$ cat contato.txt</code></h3>
 
