@@ -2,8 +2,10 @@
 
 # 👋 Olá, eu sou a Janiele Cristina!
 
+### Desenvolvedora Full Stack Júnior • React • Node.js • TypeScript
+
 <p>
-Desenvolvedora de aplicações completas apaixonada por Back-end, arquitetura de software e criação de aplicações modernas.
+Transformo ideias em aplicações completas, unindo interfaces modernas, APIs robustas e boas práticas de desenvolvimento. Sou apaixonada por tecnologia, aprendizado contínuo e por criar soluções que ofereçam uma ótima experiência para quem utiliza.
 </p>
 
 <br>
@@ -14,7 +16,7 @@ Desenvolvedora de aplicações completas apaixonada por Back-end, arquitetura de
 
 <br><br>
 
-<h3><code>janiele@github:~$ quem-sou</code></h3>
+<h3><code>janiele@github:~$ whoami</code></h3>
 
 <table>
 <tr>
@@ -24,7 +26,7 @@ Desenvolvedora de aplicações completas apaixonada por Back-end, arquitetura de
 </td>
 
 <td valign="top">
-<img src="info-card.svg" width="490"/>
+<img src="./info-card.svg" width="490"/>
 </td>
 
 </tr>
@@ -32,13 +34,47 @@ Desenvolvedora de aplicações completas apaixonada por Back-end, arquitetura de
 
 <br>
 
-<h3><code>janiele@github:~$ ls tecnologias</code></h3>
+<h3><code>janiele@github:~$ stack --list</code></h3>
 
-<p>
+<img src="https://skillicons.dev/icons?i=react,nextjs,ts,tailwind,nodejs,nestjs,express,postgres,prisma,supabase,git,github,vscode,figma"/>
 
-<img src="https://skillicons.dev/icons?i=react,ts,nodejs,nestjs,express,postgres,prisma,git,github,vscode,tailwind"/>
+<br><br>
 
-</p>
+<h3><code>janiele@github:~$ cat sobre.txt</code></h3>
+
+</div>
+
+```text
+💚 Desenvolvedora Full Stack Júnior
+
+🎨 Front-end
+├── React
+├── TypeScript
+├── Tailwind CSS
+├── React Hook Form
+└── Next.js (estudando)
+
+⚙️ Back-end
+├── Node.js
+├── Express
+├── NestJS
+├── Prisma ORM
+└── PostgreSQL
+
+☁️ Ferramentas
+├── Git & GitHub
+├── Supabase
+├── Vercel
+└── VS Code
+
+📚 Atualmente
+├── Arquitetura de Software
+├── NestJS
+├── Boas práticas
+└── Clean Code
+```
+
+<div align="center">
 
 <br>
 
@@ -47,40 +83,41 @@ Desenvolvedora de aplicações completas apaixonada por Back-end, arquitetura de
 </div>
 
 <table>
+
 <tr>
 
-<td width="50%">
+<td width="50%" valign="top">
 
-### 💳 Sistema de Mensalidades
+## 💳 Sistema de Mensalidades
 
-Sistema completo para gerenciamento de clientes, planos, assinaturas e pagamentos.
+Aplicação Full Stack para gerenciamento de clientes, planos, assinaturas e pagamentos.
 
-**Tecnologias**
+### Tecnologias
 
+- React
+- TypeScript
+- Tailwind CSS
 - Node.js
 - Express
 - Prisma
 - PostgreSQL
 - JWT
-- TypeScript
 
 </td>
 
-<td width="50%">
+<td width="50%" valign="top">
 
-### 🍕
+## 🚗 WebCarros
 
-API de Pizzaria
+Plataforma para anúncios de veículos com autenticação, dashboard e gerenciamento de anúncios.
 
-API REST com autenticação, pedidos e gerenciamento de produtos.
+### Tecnologias
 
-**Tecnologias**
-
-- Node.js
-- Express
-- PostgreSQL
-- Prisma
-- JWT
+- React
+- TypeScript
+- Tailwind CSS
+- Supabase
+- React Hook Form
 
 </td>
 
@@ -88,28 +125,37 @@ API REST com autenticação, pedidos e gerenciamento de produtos.
 
 <tr>
 
-<td width="50%">
+<td width="50%" valign="top">
 
-### 🚗 WebCarros
+## 🍕 API Pizzaria
 
-Sistema para gerenciamento de veículos.
+API REST com autenticação JWT, gerenciamento de pedidos, categorias e produtos.
 
-**Tecnologias**
+### Tecnologias
 
-- React
-- TypeScript
-- Tailwind
 - Node.js
+- Express
+- Prisma
+- PostgreSQL
+- JWT
+- Cloudinary
 
 </td>
 
-<td width="50%">
+<td width="50%" valign="top">
 
-### 🚀 Atualmente
+## 📊 Painel Administrativo
 
-- 📚 Estudando NestJS
-- ⚡ Aprendendo arquitetura back-end
-- 💚 Em busca de oportunidades como Desenvolvedora Júnior de aplicações completas
+Dashboard moderno para gerenciamento completo do sistema de mensalidades.
+
+### Tecnologias
+
+- React
+- TypeScript
+- Tailwind CSS
+- ApexCharts
+- React Router
+- Zod
 
 </td>
 
@@ -121,31 +167,53 @@ Sistema para gerenciamento de veículos.
 
 <div align="center">
 
-
-<h3><code>janiele@github:~$ estatisticas</code></h3>
+<h3><code>janiele@github:~$ github-stats</code></h3>
 
 <table>
 <tr>
 
 <td align="center">
 <img
-  height="180"
-  src="https://github-readme-stats-lpww4patd-janielecristinas-projects.vercel.app/api?username=JanieleCristina006&show_icons=true&theme=github_dark&hide_border=true&locale=pt-br&v=2"
+height="180"
+src="https://github-readme-stats-lpww4patd-janielecristinas-projects.vercel.app/api?username=JanieleCristina006&show_icons=true&theme=github_dark&hide_border=true&locale=pt-br&v=2"
 />
 </td>
 
 <td align="center">
 <img
-  height="180"
-  src="https://github-readme-stats-lpww4patd-janielecristinas-projects.vercel.app/api/top-langs/?username=JanieleCristina006&layout=compact&theme=github_dark&hide_border=true&locale=pt-br&v=2"
+height="180"
+src="https://github-readme-stats-lpww4patd-janielecristinas-projects.vercel.app/api/top-langs/?username=JanieleCristina006&layout=compact&theme=github_dark&hide_border=true&locale=pt-br&v=2"
 />
 </td>
 
 </tr>
 </table>
 
-</div>
-<br><br>
+<br>
+
+<h3><code>janiele@github:~$ status</code></h3>
+
+<table>
+
+<tr>
+
+<td align="left">
+
+🌱 Aprimorando conhecimentos em **NestJS** e arquitetura de software.
+
+💻 Desenvolvendo projetos Full Stack utilizando React, Node.js e TypeScript.
+
+🚀 Sempre buscando escrever código limpo, organizado e escalável.
+
+🤝 Aberta a oportunidades como **Desenvolvedora Full Stack Júnior**.
+
+</td>
+
+</tr>
+
+</table>
+
+<br>
 
 <h3><code>janiele@github:~$ cat contato.txt</code></h3>
 
