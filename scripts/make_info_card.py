@@ -41,35 +41,36 @@ ROWS = [
     ("host",),
 
     ("kv", "Nome", "Janiele Cristina"),
-    ("kv", "Cargo", "Desenvolvedora de aplicações completas Júnior"),
+    ("kv", "Cargo", "Desenvolvedora Full Stack Júnior"),
     ("kv", "Cidade", "Alfenas - MG"),
-    ("kv", "Objetivo", "Desenvolvimento Back-end"),
+    ("kv", "Objetivo", "Desenvolvimento Full Stack"),
 
     ("gap",),
 
     ("sec", "Tecnologias"),
 
-    ("kv", "Front-end", "React, TypeScript, Tailwind"),
+    ("kv", "Front-end", "React, TypeScript, Tailwind CSS"),
     ("kv", "Back-end", "Node.js, Express, NestJS"),
     ("kv", "Banco", "PostgreSQL, Prisma"),
+    ("kv", "Cloud", "Supabase, Vercel"),
     ("kv", "Ferramentas", "Git, GitHub, JWT, Zod"),
-    ("kv", "Nuvem", "Supabase, Vercel"),
 
     ("gap",),
 
     ("sec", "Atualmente"),
 
-    ("bul", "Estudando NestJS"),
-    ("bul", "Criando aplicações completas"),
-    ("bul", "Buscando oportunidade como desenvolvedora júnior"),
+    ("bul", "Estudando NestJS e Arquitetura de Software"),
+    ("bul", "Desenvolvendo aplicações Full Stack"),
+    ("bul", "Aprimorando boas práticas e Clean Code"),
+    ("bul", "Buscando oportunidade como Desenvolvedora Full Stack Júnior"),
 
     ("gap",),
 
-    ("sec", "Destaques"),
+    ("sec", "Projetos"),
 
     ("bul", "Sistema de Mensalidades"),
-    ("bul", "API de Pizzaria"),
     ("bul", "WebCarros"),
+    ("bul", "API de Pizzaria"),
 ]
 
 def esc(s):
