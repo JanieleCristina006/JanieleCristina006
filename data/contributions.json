@@ -1,22 +1,22 @@
 {
   "username": "JanieleCristina006",
-  "generated_at": "2026-08-20T07:09:00Z",
+  "generated_at": "2026-08-21T07:10:00Z",
   "range": {
     "start": "2025-08-17",
+    "end": "2026-08-21"
+  },
+  "total_contributions": 383,
+  "active_days": 130,
+  "avg_per_active_day": 2.9,
+  "current_streak": {
+    "length": 34,
+    "start": "2026-07-18",
     "end": "2026-08-20"
   },
-  "total_contributions": 382,
-  "active_days": 129,
-  "avg_per_active_day": 3.0,
-  "current_streak": {
-    "length": 33,
-    "start": "2026-07-18",
-    "end": "2026-08-19"
-  },
   "longest_streak": {
-    "length": 33,
+    "length": 34,
     "start": "2026-07-18",
-    "end": "2026-08-19"
+    "end": "2026-08-20"
   },
   "best_day": {
     "date": "2026-07-19",
@@ -73,7 +73,7 @@
     },
     {
       "month": "2026-08",
-      "total": 26
+      "total": 27
     }
   ],
   "days": [
@@ -1551,6 +1551,10 @@
     },
     {
       "date": "2026-08-20",
+      "count": 1
+    },
+    {
+      "date": "2026-08-21",
       "count": 0
     }
   ]
